@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+
+
+<div class="jumbotron"
+style="background:white;">
+<img src="{% static 'mb_01.jpg' %}"style="margin-top:-50px; float:right;" alt="">
+<h1 class="display-4">The Biggest Corona Sale is Here</h1>
+<p class="lead"> With upto 50% off on electronics and flat 20% cash back on Furniture !!</p>
+<hr class="my-4">
+<p>Hurry up!</p>
+<p class="lead">
+<a class="btn btn-primary btn-lg" href="#" role="button">Buy Now</a>
+</p>
+
+
+<div class="container" >
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">
+      <div class="card" style="width: 13rem;">
+        <img class="card-img-top" src="{% static 'royalplates.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Plates</h5>
+          <p class="card-text">Beautiful in design, as well as price</p>
+          <a href="{% url 'ChristKart:plates' %}" class="btn btn-primary disabled">Explore </a>
+        </div>
+      </div></th>
+    <th scope="col">
+      <div class="card" style="width: 13rem;">
+        <img class="card-img-top" src="{% static 'eco.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Straws</h5>
+          <p class="card-text">High-Quality and Eco-Friendly</p>
+          <a href="{% url 'ChristKart:straws' %}" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+    </th>
+    <th scope="col">
+
+      <div class="card" style="width: 13rem;">
+        <img class="card-img-top"src="{% static 'redbag.jpg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Bags</h5>
+          <p class="card-text">Stronger and Longer</p>
+          <a href="{% url 'ChristKart:bags' %}" class="btn btn-primary disabled">Explore</a>
+        </div>
+      </div>
+
+    </th>
+
+  </tr>
+</thead>
+
+</table>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

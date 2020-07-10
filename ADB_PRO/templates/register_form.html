@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<style media="screen">
+  input{
+    width:300px;
+    height:30px;
+    text-align: center;
+
+  }
+</style>
+
+
+<div class="jumbotron">
+<center>
+
+  <div class="container">
+
+
+    {% if registered == True %}
+      <h1>Thanks for registering</h1>
+    {% else %}
+    <h1>Registration Form</h1>
+    <br>
+
+
+
+    <form class="" method="post">
+      {% csrf_token %}
+
+      {{user_form.as_p}}
+    {{profile_form.as_p}}
+  <input type="submit" name="" value="Login" class="btn btn-primary">
+
+</form>
+
+
+
+
+
+
+
+
+    {% endif %}
+
+
+
+
+
+
+  </div>
+  </center>
+
+</div>
+
+
+{% endblock %}

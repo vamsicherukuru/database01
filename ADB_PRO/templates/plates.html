@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body{
+        background-image: url("{% static 'back_02.jpg' %}");
+        background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" style="font-size:40px;">ChristKart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"  style="font-size:20px;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  style="font-size:20px;">Men's Corner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  style="font-size:20px;">Women's Corner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#"  style="font-size:20px;"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">
+
+<img class="card-img-top" src="{% static 'ecoplates.jpg' %}" style="width:200px;" alt="Card image cap">
+  <a href="{% url 'ChristKart:straws' %}" class="btn btn-primary" style="float:right; margin-top:80px;width:100px;">  Buy  </a>
+  <br>
+  Eco leaf plates (8 numbers)
+
+
+
+        </th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Delivery</th>
+      </tr>
+    </thead>
+    <tr>
+      <td></td>
+      <td>8</td>
+      <td>Rs. 459/-</td>
+      <td>Delivery in 3 days, if ordered before 12:00 hrs
+</td>
+    </tr>
+
+    </table>
+
+
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">
+
+<img class="card-img-top" src="{% static 'royalplates.jpg' %}" style="width:200px;" alt="Card image cap">
+  <a href="{% url 'ChristKart:straws' %}" class="btn btn-primary" style="float:right; margin-top:80px;width:100px;">  Buy  </a>
+  <br>
+  Royal Plates( 8 numbers)
+
+
+
+        </th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Delivery</th>
+      </tr>
+    </thead>
+    <tr>
+      <td></td>
+      <td>8</td>
+      <td>Rs. 459/-</td>
+      <td>in 4 Days</td>
+    </tr>
+
+    </table>
+
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">
+
+  <img class="card-img-top" src="{% static 'stainless.jpg' %}" style="width:200px;" alt="Card image cap">
+    <a href="{% url 'ChristKart:straws' %}" class="btn btn-primary" style="float:right; margin-top:80px;width:100px;">  Buy  </a>
+    <br>
+    SS Stainless Stell plates (8 numbers)
+
+
+
+          </th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Delivery</th>
+        </tr>
+      </thead>
+      <tr>
+        <td></td>
+        <td>8</td>
+        <td>Rs. 459/-</td>
+        <td>in 4 Days</td>
+      </tr>
+
+      </table>
+
+
+
+
+  </body>
+</html>

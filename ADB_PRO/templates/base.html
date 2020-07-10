@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body{
+        background-image: url("{% static 'back_02.jpg' %}");
+        background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'ChristKart:home' %}" style="font-size:40px;">ChristKart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"  style="font-size:20px;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  style="font-size:20px;">Men's Corner</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  style="font-size:20px;">Women's Corner</a>
+        </li>
+
+        {% if user.is_authenticated %}
+        <li class="nav-item" style="margin-left:300px;">
+          <a class="nav-link" href="{% url 'ChristKart:user_logout' %}"  style="font-size:20px;">Logout</a>
+        </li>
+
+        <li class="nav-item" style="margin-top:0px;">
+
+          <a class="nav-link" href="#"  style="font-size:20px;">User : {{user.username}}</a>
+        </li>
+
+        {% else %}
+        <li class="nav-item" style="margin-left:300px;">
+          <a class="nav-link" href="{% url 'ChristKart:user_login' %}"  style="font-size:20px;">Login</a>
+        </li>
+
+        <li class="nav-item" style="margin-left:20px;">
+          <a class="nav-link" href="{% url 'ChristKart:register' %}"  style="font-size:20px;"> Register</a>
+        </li>
+        {% endif %}
+
+
+      </ul>
+
+    </div>
+
+
+
+
+
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
+  </body>
+</html>
